@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "function": {
+      "dynamocb0b6ebcTrigger181a01e8": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    },
+    "storage": {
+      "dynamocb0b6ebc": [
+        "create",
+        "read",
+        "update",
+        "delete"
+      ]
+    }
+  },
+  "lambdaLayers": [],
+  "environmentVariableList": [
+    {
+      "cloudFormationParameterName": "dbname",
+      "environmentVariableName": "dbname"
+    }
+  ]
+}

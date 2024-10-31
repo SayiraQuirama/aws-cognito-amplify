@@ -1,0 +1,11 @@
+<form>
+    <h2>Enter verification code sent to your email</h2>
+    <div>
+        <label for="code">Code: </label>
+        <input type="text" [formControl]="confirmationCode" id="code">
+        <div *ngIf="confirmationCode.invalid && confirmationCode.touched" class="error">
+            Code is required and must be at least 6 characters.
+        </div>
+    </div>
+    <button type="button" (click)="confirmCreatedUser()">Verify</button>
+</form>

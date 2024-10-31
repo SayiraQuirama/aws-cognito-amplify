@@ -1,0 +1,42 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-awsroute-dev-20df8-authRole",
+      "UnauthRoleArn": "arn:aws:iam::605134450230:role/amplify-awsroute-dev-20df8-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::605134450230:role/amplify-awsroute-dev-20df8-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-awsroute-dev-20df8-deployment",
+      "UnauthRoleName": "amplify-awsroute-dev-20df8-unauthRole",
+      "StackName": "amplify-awsroute-dev-20df8",
+      "StackId": "arn:aws:cloudformation:us-east-1:605134450230:stack/amplify-awsroute-dev-20df8/5b7ccf80-92ef-11ef-8341-1265f74f18a9",
+      "AmplifyAppId": "dcy5bw2867z8h"
+    },
+    "categories": {
+      "function": {
+        "awsroutea4d7817d": {
+          "dbname": "aws-route",
+          "deploymentBucketName": "amplify-awsroute-dev-20df8-deployment",
+          "s3Key": "amplify-builds/awsroutea4d7817d-5564365532695a752f65-build.zip"
+        },
+        "dynamocb0b6ebcTrigger181a01e8": {
+          "deploymentBucketName": "amplify-awsroute-dev-20df8-deployment",
+          "s3Key": "amplify-builds/dynamocb0b6ebcTrigger181a01e8-2f38423331306c32326f-build.zip"
+        }
+      },
+      "storage": {
+        "dynamocb0b6ebc": {}
+      },
+      "api": {
+        "apiawsroute": {}
+      },
+      "auth": {
+        "awsroutefc47eb56": {
+          "userPoolId": "us-east-1_rAbG9Mkiw",
+          "userPoolName": "client-pull",
+          "webClientId": "5vipp6ih9v5r7rag6jqkq39t3t",
+          "nativeClientId": "5vipp6ih9v5r7rag6jqkq39t3t"
+        }
+      }
+    }
+  }
+}

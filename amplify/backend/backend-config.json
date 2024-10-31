@@ -1,0 +1,160 @@
+{
+  "api": {
+    "apiawsroute": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "awsroutea4d7817d"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "auth": {
+    "awsroutefc47eb56": {
+      "customAuth": false,
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "imported"
+    }
+  },
+  "function": {
+    "awsroutea4d7817d": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributeEnvMap": {
+            "Arn": "TABLE_ARN",
+            "Name": "TABLE_NAME"
+          },
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamocb0b6ebc"
+        },
+        {
+          "attributes": [
+            "Name"
+          ],
+          "category": "function",
+          "resourceName": "dynamocb0b6ebcTrigger181a01e8"
+        },
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamocb0b6ebc"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    },
+    "dynamocb0b6ebcTrigger181a01e8": {
+      "build": true,
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn",
+            "StreamArn"
+          ],
+          "category": "storage",
+          "resourceName": "dynamocb0b6ebc"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_auth_awsroutefc47eb56_nativeClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awsroutefc47eb56"
+        }
+      ]
+    },
+    "AMPLIFY_auth_awsroutefc47eb56_userPoolId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awsroutefc47eb56"
+        }
+      ]
+    },
+    "AMPLIFY_auth_awsroutefc47eb56_userPoolName": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awsroutefc47eb56"
+        }
+      ]
+    },
+    "AMPLIFY_auth_awsroutefc47eb56_webClientId": {
+      "usedBy": [
+        {
+          "category": "auth",
+          "resourceName": "awsroutefc47eb56"
+        }
+      ]
+    },
+    "AMPLIFY_function_awsroutea4d7817d_dbname": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "awsroutea4d7817d"
+        }
+      ]
+    },
+    "AMPLIFY_function_awsroutea4d7817d_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "awsroutea4d7817d"
+        }
+      ]
+    },
+    "AMPLIFY_function_awsroutea4d7817d_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "awsroutea4d7817d"
+        }
+      ]
+    },
+    "AMPLIFY_function_dynamocb0b6ebcTrigger181a01e8_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "dynamocb0b6ebcTrigger181a01e8"
+        }
+      ]
+    },
+    "AMPLIFY_function_dynamocb0b6ebcTrigger181a01e8_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "dynamocb0b6ebcTrigger181a01e8"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "dynamocb0b6ebc": {
+      "providerPlugin": "awscloudformation",
+      "service": "DynamoDB"
+    }
+  }
+}

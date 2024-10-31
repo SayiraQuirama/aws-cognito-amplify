@@ -1,0 +1,15 @@
+<form (ngSubmit)="createUser()" [formGroup]="signUpUser">
+    <h2>Sign Up</h2>
+    <div>
+        <label for="email">Email address</label>
+        <input type="email" name="email" id="email" [formControl]="signUpUser.controls['userEmail']">
+    </div>
+    <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" [formControl]="signUpUser.controls['userPassword']">
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+</form>
+<p>Do you already have an account? <a href="/login">Login now</a></p>

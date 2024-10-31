@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/items": {
+      "name": "/items",
+      "lambdaFunction": "awsroutea4d7817d",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
